@@ -1,0 +1,613 @@
+@font-face {
+    font-family: Arcade;
+    src: url("font/3997-font.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration-line: none;
+}
+body{
+    min-height: 100vh;
+    background: url("img/bgg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    height: fit-content;
+}
+
+
+.grid-item-main{
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+    display: grid;
+    justify-items: center;
+    height: fit-content;
+    grid-template-rows:  min-content min-content 3fr;
+    color: white;
+    background: rgba(212,47,241,0.15);
+    border-radius: 3rem;
+    /*background-image: url("img/mainbg.jpg");*/
+}
+.grid-item-1{
+    height: 100vh;
+}
+.grid-item-2{
+    height: 100vh;
+}
+
+.menu{
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-columns: 2fr 2fr 1fr;
+    height: fit-content;
+    background: rgba(135,124,206,0.8);
+}
+
+.menu button{
+    height: 10rem;
+    position: relative;
+    border: 10px cyan double;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url("img/84d300d9ae87ba1d8d141cd9f24e4f2d--sakura-anime-scenery.jpg");
+    background-size: cover;
+}
+
+
+
+
+
+.el {
+    width: 100%;
+}
+.header{
+    position: relative;
+    height: fit-content;
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column: 1 / 3;
+    justify-content: center;
+    background: #e7fafc;
+    border-radius: 3rem 3rem 0 0;
+}
+.header img{
+    border-radius: 40px;
+    width: 100%;
+    align-self: flex-end;
+}
+.header a{
+    align-self: flex-end;
+    z-index: 1;
+}
+.main-img{
+    align-self: flex-end;
+    z-index: 1;
+    box-shadow: 0px 15px 40px 10px rgba(35,77,106,0.59);
+}
+
+
+.button-3 {
+    font-family: "Gochi Hand", cursive;
+    position: relative;
+    color: fuchsia;
+    background-color: rgba(236,249,252,1);
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 5% 10%;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.button-3:hover {
+    transform: translateY(-2%);
+    z-index: 1;
+    font-size: 3.5em;
+    color: white;
+    background-color: rgba(252,167,245,0.7);
+    transition-delay: 0.5s;
+    box-shadow: 0 0 10px fuchsia, 0 0 40px fuchsia, 0 0 80px fuchsia;
+}
+
+.button-3:hover span:nth-child(1) {
+    left: 100%;
+}
+
+.button-3:hover span:nth-child(2) {
+    top: 100%;
+}
+
+.button-3:hover span:nth-child(3) {
+    right: 100%;
+}
+
+.button-3:hover span:nth-child(4) {
+    bottom: 100%;
+}
+.button-3:hover:before {
+    border: none;
+}
+
+.button-3 span {
+    display: block;
+    position: absolute;
+    transition: 0.6s ease;
+}
+
+.button-3 span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, fuchsia);
+    transition-delay: 0.25s;
+}
+
+.button-3 span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, fuchsia);
+}
+
+.button-3 span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, fuchsia);
+    transition-delay: 0.25s;
+}
+
+.button-3 span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    color:fuchsia;
+    background: linear-gradient(0, transparent, fuchsia);
+}
+
+.content-container{
+    position: relative;
+    display: grid;
+    grid-column: 1/3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 0.3fr 1fr 1fr 1fr 3fr 1fr;
+    height: fit-content;
+    justify-items: center;
+    text-align: center;
+    color: cyan;
+    padding: 5rem;
+    justify-self: center;
+    width: 100%;
+
+    border-radius: 0 0 5rem 5rem;
+}
+.content-header{
+    position: relative;
+    grid-column: 1 / 3;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+.content-header h1{
+    z-index: 4;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.avatar{
+    position: relative;
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    background: rgba(187,159,206,0.38);
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.avatar img{
+    position: absolute;
+    width: 15rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.avatar input{
+    display: none;
+}
+.change-avatar{
+    z-index: -1;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: grid;
+    width: 10rem;
+    height: 10rem;
+    background: url("img/changeav.png");
+    background-size: 6rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.avatar:hover .change-avatar{
+    z-index: 12;
+    opacity: 1;
+}
+.change-background{
+    z-index: 0;
+    display: block;
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(187,159,206,0.38);
+    overflow: hidden;
+}
+.change-background input{
+    display: none;
+}
+.change-background-button{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: url("img/option.png");
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 30%;
+    opacity: 0.5;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.change-background:hover .change-background-button{
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.change-background img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    border-radius: 2rem;
+    border: 5px cyan double;
+    padding: 0.2rem 1rem 1rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.banner h1{
+    font-size: 2rem;
+}
+.banner p{
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+}
+.aboutme{
+    grid-column: 1 / 3;
+    width: 80%;
+    border: 5px cyan double;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+
+
+
+footer{
+    opacity: 0.8;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    z-index: 3;
+    align-self: flex-end;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    background: rgba(0,0,0,0.29);
+    margin-top: 3rem;
+}
+footer p{
+    padding-bottom: 0.3rem;
+}
+footer h1{
+    font-family: Gabriola;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.aboutme form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.aboutme{
+    margin-top: 3rem;
+}
+textarea{
+    width: 70%;
+    min-height:15rem;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5%;
+    padding: 1rem;
+}
+.submit{
+    width: calc(5rem);
+    margin-top: 1rem;
+    border-radius: 20%;
+    background: cyan;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid cyan;
+    color: black;
+    transition: 1s;
+    transition-duration: 1s;
+}
+
+.submit:hover{
+    color: white;
+    background: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+@keyframes change-color {
+    0% {
+        background: transparent;
+    }
+    40%{
+        background: #d83b5c;
+    }
+    80%{
+        background: crimson;
+    }
+    100%{
+        background: linear-gradient(#f3a71a, #e91e63);
+    }
+
+}
+.socials{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.text-el-3:hover .socials{
+    display: flex;
+}
+
+.btn:hover{
+    background: red;
+}
+
+@media only screen and (max-width: 1025px){
+    .grid-item-main{
+        grid-column: 1 / 4;
+    }
+    .grid-item-1{
+        display: none;
+    }
+    .grid-item-2{
+        display: none;
+    }
+    .menu{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .menu button{
+        background-size: cover;
+        height: 10rem;
+    }
+
+    footer{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .banner p{
+        font-size: 1rem;
+    }
+    .content-container{
+        grid-template-rows: 1.6fr 0.3fr 0.6fr 0.6fr 0.6fr 1.6fr 1fr;
+    }
+}
+.btn{
+    transition: 1s;
+    transition-duration: 1s;
+    border-radius: 20%;
+    padding: 0.5rem;
+}
+.tg1:hover {
+    background: #5991cf;
+}
+.yt1:hover {
+    background: #d83a15;
+}
+.twi1:hover {
+    background: #5c96e8;
+}
+.sp1:hover {
+    background: #6fce62;
+}
+.inst1:hover {
+    transition: 2s;
+    animation: change-color 2.5s 1;
+    background: linear-gradient(#f3a71a, #e91e63);
+}
+
+.hide{
+    display: none;
+}
+.text-el-3:hover .hide{
+    display: block;
+}
+
+.h1grid{
+    grid-column: 1 / 3;
+    padding: 0.5rem 2rem 4rem 2rem;
+    font-size: 4rem;
+}
+
+
+.header-img{
+    position: absolute;
+    color: black;
+    width: 50%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+.header-img img{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 35;
+}
+
+.menu-text{
+    font-size: 0px;
+}
+
+.profile-button:before{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    content: 'ПРОФИЛЬ';
+    font-family: Gabriola;
+    font-size: 4rem;
+    color: cyan;
+}
+
+.profile-button {
+    font-family: "Gochi Hand", cursive;
+    position: relative;
+    background-color: rgba(236,249,252,1);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 5% 10%;
+    cursor: pointer;
+    transition: 0.6s ease;
+    font-size: 0;
+    z-index: 2;
+}
+
+
+
+.profile-button:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.grades-button:before{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    content: 'ОЦЕНКИ';
+    font-family: Gabriola;
+    font-size: 4rem;
+    color: cyan;
+}
+
+.grades-button {
+    font-family: "Gochi Hand", cursive;
+    position: relative;
+    background-color: rgba(236,249,252,1);
+    text-transform: uppercase;
+    font-size: 0;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 5% 10%;
+    cursor: pointer;
+    transition: 0.6s ease;
+    z-index: 2;
+}
+
+
+
+.grades-button:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.exit-button:before{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    content: 'Выйти';
+    font-family: Gabriola;
+    font-size: 4rem;
+    color: cyan;
+}
+
+.exit-button {
+    font-family: "Gochi Hand", cursive;
+    position: relative;
+    background-color: rgba(236,249,252,1);
+    text-transform: uppercase;
+    font-size: 0;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 5% 10%;
+    cursor: pointer;
+    transition: 0.6s ease;
+    z-index: 2;
+}
+
+
+
+.exit-button:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.4);
+}

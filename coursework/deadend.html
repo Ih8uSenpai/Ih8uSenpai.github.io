@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="endStyle.css">
+    <meta charset="UTF-8">
+    <title>gg</title>
+</head>
+<body>
+<div class="animation" id="anime"></div>
+<audio controls autoplay="autoplay">
+    <source src="unravel.mp3">
+</audio>
+<div class="bad-end" id="bad-end">BAD ENDING</div>
+<script>
+
+    document.querySelector("#anime").getAnimations()[1].onfinish = function(){
+        document.getElementById("bad-end").style.display = 'grid';
+    }
+</script>
+</body>
+</html>

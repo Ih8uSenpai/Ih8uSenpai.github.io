@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+    <link rel="stylesheet" href="profileStyle.css">
+    <script>
+        function loaddata(){
+            var tmp = new Array();    // два вспомогательных
+            var tmp2 = new Array();  // массива
+            get = new Array();
+            var url = location.search;    // строка GET запроса
+            if(url != '') {
+                tmp = (url.substr(1)).split('&');   // разделяем переменные
+                for(var i=0; i < tmp.length; i++) {
+                    tmp2 = tmp[i].split('=');     // массив get будет содержать
+                    get[tmp2[0]] = tmp2[1];       // пары ключ(имя переменной)->значение
+                }
+            }
+//дальше заполняем все, что нам надо данными из массива get
+            document.getElementById("Username").innerHTML = get['Username'];
+            document.getElementById("Username1").innerHTML = get['Username'];
+            document.getElementById("Username2").innerHTML = get['Username'];
+            document.getElementById("Username3").innerHTML = get['Username'];
+            document.getElementById("u1").value = get['Username'];
+            document.getElementById("u2").value = get['Username'];
+            document.getElementById("u3").value = get['Username'];
+            document.getElementById("u4").value = get['Username'];
+        }
+
+    </script>
+</head>
+<body onLoad='loaddata()'>
+
+<div class="container">
+    <div class="grid-item grid-item-1"></div>
+    <div class="grid-item grid-item-main">
+        <div class="el header">
+            <img src="img/bg112.jpg" alt="">
+            <form action="home.html" method="get" id="form1">
+                <img src="img/download%20(3).gif" alt="">
+                <input type="text" name="Username" id="u1" style="display: none">
+                <button  class="header-img menu-text" type="submit" id="Username1" form="form1">
+                </button>
+            </form>
+            <img src="img/bg111.jpg" alt="">
+        </div>
+        <div class="el menu">
+            <form action="profile.html" method="get" id="form2">
+                <input type="text" name="Username" id="u2" style="display: none">
+                <button class="menu-text profile-button" type="submit" id="Username2" form="form2">
+                </button>
+            </form>
+            <form action="grades.html" method="get" id="form3">
+                <input type="text" name="Username" id="u3" style="display: none">
+                <button class="grades-button menu-text" type="submit" id="Username3" form="form3">
+                </button>
+            </form>
+            <a href="https://Ih8uSenpai.github.io">
+                <button class="exit-button">
+                </button></a>
+        </div>
+        <div class="content-container">
+            <div class="content-header">
+                <div class="avatar">
+                    <label class="change-avatar" id="change-avatar">
+                        <input type="file" id="file-selector">
+                    </label>
+                    <p id="status"></p>
+                    <div>
+                        <img id="output">
+                    </div>
+                    <script>
+                        const status = document.getElementById('status');
+                        const output = document.getElementById('output');
+                        if (window.FileList && window.File && window.FileReader) {
+                            document.getElementById('file-selector').addEventListener('change', event => {
+                                output.src = '';
+                                status.textContent = '';
+                                const file = event.target.files[0];
+                                if (!file.type) {
+                                    status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+                                    return;
+                                }
+                                if (!file.type.match('image.*')) {
+                                    status.textContent = 'Error: The selected file does not appear to be an image.'
+                                    return;
+                                }
+                                const reader = new FileReader();
+                                reader.addEventListener('load', event => {
+                                    output.src = event.target.result;
+                                });
+                                reader.readAsDataURL(file);
+                            });
+                        }
+                    </script>
+                </div>
+                <div class="change-background">
+                    <label class="change-background-button">
+                        <input type="file" id="file-selector1">
+                    </label>
+                    <p id="status1"></p>
+                    <div>
+                        <img id="output1">
+                    </div>
+                    <script>
+                        const status1 = document.getElementById('status1');
+                        const output1 = document.getElementById('output1');
+                        if (window.FileList && window.File && window.FileReader) {
+                            document.getElementById('file-selector1').addEventListener('change', event => {
+                                output1.src = '';
+                                status1.textContent = '';
+                                const file = event.target.files[0];
+                                if (!file.type) {
+                                    status1.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+                                    return;
+                                }
+                                if (!file.type.match('image.*')) {
+                                    status1.textContent = 'Error: The selected file does not appear to be an image.'
+                                    return;
+                                }
+                                const reader = new FileReader();
+                                reader.addEventListener('load', event => {
+                                    output1.src = event.target.result;
+                                });
+                                reader.readAsDataURL(file);
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+            <h1 class="h1grid"><span class="big-text" name="Username" id="Username"></span></h1>
+            <div class="banner">
+                <h1>фио</h1>
+                <p>Маров Егор Андреевич</p>
+            </div>
+            <div class="banner">
+                <h1>группа</h1>
+                <p>ИКБО-24-21</p>
+            </div>
+            <div class="banner">
+                <h1>курс</h1>
+                <p>2-й</p>
+            </div>
+            <div class="banner">
+                <h1>направление</h1>
+                <p>09.03.04</p>
+            </div>
+            <div class="banner">
+                <h1>email</h1>
+                <p>qtqtqtqtsoqqqt@gmail.com</p>
+            </div>
+            <div class="banner">
+                <h1>номер телефона</h1>
+                <p>+7 960 556 90 95</p>
+            </div>
+            <div class="aboutme">
+                <h1>о себе</h1>
+                <form>
+                    <input type="text" name="Username" id="u4" style="display: none">
+                <textarea class="txtarea" name="message" id="about" maxlength="300" minlength="1"
+                          placeholder="type something (1-300 symbols)" required></textarea>
+                    <input class="submit" type="submit" name="submit_btn" value="send">
+                </form>
+            </div>
+            <footer>
+                <h1>© Маров Егор Андреевич<br>ИКБО-24-21</h1>
+                <div class="footer-el"><p>+7 960 556 90 95</p> <p>mipichikimicci33uwu@gmail.com</p></div>
+                <div class="socials">
+                    <a href=""><img src="img/yt.png" width="50rem" class="btn yt1"></a>
+                    <a href=""><img src="img/twi.png" width="50rem" class="btn twi1"></a>
+                    <a href=""><img src="img/tg.png" width="50rem" class="btn tg1"></a>
+                    <a href=""><img src="img/inst.png" width="50rem" class="btn inst1"></a>
+                    <a href=""><img src="img/sp.png" width="50rem" class="btn sp1"></a>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <div class="grid-item-2"></div>
+</div>
+
+</body>
+</html>

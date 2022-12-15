@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>grades</title>
+  <link rel="stylesheet" href="gradesStyle.css">
+  <script>
+    function loaddata(){
+      var tmp = new Array();    // два вспомогательных
+      var tmp2 = new Array();  // массива
+      get = new Array();
+      var url = location.search;    // строка GET запроса
+      if(url != '') {
+        tmp = (url.substr(1)).split('&');   // разделяем переменные
+        for(var i=0; i < tmp.length; i++) {
+          tmp2 = tmp[i].split('=');     // массив get будет содержать
+          get[tmp2[0]] = tmp2[1];       // пары ключ(имя переменной)->значение
+        }
+      }
+//дальше заполняем все, что нам надо данными из массива get
+      document.getElementById('Username1').innerHTML = get['Username'];
+      document.getElementById('Username2').innerHTML = get['Username'];
+      document.getElementById('Username3').innerHTML = get['Username'];
+      document.getElementById('Username4').innerHTML = get['Username'];
+      document.getElementById('Username5').innerHTML = get['Username'];
+      document.getElementById('Username6').innerHTML = get['Username'];
+      document.getElementById('Username7').innerHTML = get['Username'];
+      document.getElementById('Username8').innerHTML = get['Username'];
+      document.getElementById('Username9').innerHTML = get['Username'];
+      document.getElementById('Username10').innerHTML = get['Username'];
+      document.getElementById('Username11').innerHTML = get['Username'];
+      document.getElementById('u1').value = get['Username'];
+      document.getElementById('u2').value = get['Username'];
+      document.getElementById("u3").value = get['Username'];
+      document.getElementById("u4").value = get['Username'];
+      document.getElementById('u5').value = get['Username'];
+      document.getElementById('u6').value = get['Username'];
+      document.getElementById("u7").value = get['Username'];
+      document.getElementById("u8").value = get['Username'];
+      document.getElementById('u9').value = get['Username'];
+      document.getElementById('u10').value = get['Username'];
+      document.getElementById("u11").value = get['Username'];
+    }
+
+  </script>
+</head>
+<body onload="loaddata()">
+<div class="container">
+  <div class="grid-item grid-item-1"></div>
+  <div class="grid-item grid-item-main">
+    <div class="el header">
+      <img src="img/bg112.jpg" alt="">
+      <form action="home.html" method="get" id="form1">
+        <img src="img/download%20(3).gif" alt="">
+        <input type="text" name="Username" id="u1" style="display: none">
+        <button class="header-img menu-text" type="submit" id="Username1" form="form1">
+        </button>
+      </form>
+      <img src="img/bg111.jpg" alt="">
+    </div>
+    <div class="el menu">
+      <form action="profile.html" method="get" id="form2">
+        <input type="text" name="Username" id="u2" style="display: none">
+        <button class="menu-text profile-button" type="submit" id="Username2" form="form2">
+        </button>
+      </form>
+      <form action="grades.html" method="get" id="form3">
+        <input type="text" name="Username" id="u3" style="display: none">
+        <button class="grades-button menu-text" type="submit" id="Username3" form="form3">
+        </button>
+      </form>
+      <a href="https://Ih8uSenpai.github.io">
+        <button class="exit-button">
+        </button>
+      </a>
+    </div>
+    <div class="content-container">
+      <div class="content-header">
+        <img src="img/download%20(6).gif" alt="">
+      </div>
+      <div class="courses">
+        <div class="course-banner">
+          <h1 class="hover-hide">Первый курс</h1>
+
+          <form action="course1sem1.html" method="get">
+            <input type="text" name="Username" id="u4" style="display: none">
+            <button class="coursebutton course1button menu-text" type="submit" id="Username4">
+            </button>
+          </form>
+          <form action="course1sem2.html" method="get">
+            <input type="text" name="Username" id="u5" style="display: none">
+            <button class="coursebutton course2button menu-text" type="submit" id="Username5">
+            </button>
+          </form>
+        </div>
+        <div class="course-banner">
+          <h1 class="hover-hide">Второй курс</h1>
+          <form action="course2sem1.html" method="get">
+            <input type="text" name="Username" id="u6" style="display: none">
+            <button class="coursebutton course1button menu-text" type="submit" id="Username6">
+            </button>
+          </form>
+          <form action="course2sem2.html" method="get">
+            <input type="text" name="Username" id="u7" style="display: none">
+            <button class="coursebutton course2button menu-text" type="submit" id="Username7">
+            </button>
+          </form>
+        </div>
+        <div class="course-banner">
+          <h1 class="hover-hide">Третий курс</h1>
+          <form action="course3sem1.html" method="get">
+            <input type="text" name="Username" id="u8" style="display: none">
+            <button class="coursebutton course1button menu-text" type="submit" id="Username8">
+            </button>
+          </form>
+          <form action="course3sem2.html" method="get">
+            <input type="text" name="Username" id="u9" style="display: none">
+            <button class="coursebutton course2button menu-text" type="submit" id="Username9">
+            </button>
+          </form>
+        </div>
+        <div class="course-banner">
+          <h1 class="hover-hide">Четвертый курс</h1>
+          <form action="course4sem1.html" method="get">
+            <input type="text" name="Username" id="u10" style="display: none">
+            <button class="coursebutton course1button menu-text" type="submit" id="Username10">
+            </button>
+          </form>
+          <form action="course4sem2.html" method="get">
+            <input type="text" name="Username" id="u11" style="display: none">
+            <button class="coursebutton course2button menu-text" type="submit" id="Username11">
+            </button>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <h1>© Маров Егор Андреевич<br>ИКБО-24-21</h1>
+        <div class="footer-el"><p>+7 960 556 90 95</p>
+          <p>mipichikimicci33uwu@gmail.com</p></div>
+        <div class="socials">
+          <a href=""><img src="img/yt.png" width="50rem" class="btn yt1"></a>
+          <a href=""><img src="img/twi.png" width="50rem" class="btn twi1"></a>
+          <a href=""><img src="img/tg.png" width="50rem" class="btn tg1"></a>
+          <a href=""><img src="img/inst.png" width="50rem" class="btn inst1"></a>
+          <a href=""><img src="img/sp.png" width="50rem" class="btn sp1"></a>
+        </div>
+      </footer>
+    </div>
+
+
+  </div>
+  <div class="grid-item-2"></div>
+</div>
+
+</body>
+</html>

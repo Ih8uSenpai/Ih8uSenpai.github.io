@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4course2sem</title>
+    <link rel="stylesheet" href="courseStyle.css">
+    <link rel="stylesheet" href="gradesStyle.css">
+    <script>
+        function loaddata(){
+            var tmp = new Array();    // два вспомогательных
+            var tmp2 = new Array();  // массива
+            get = new Array();
+            var url = location.search;    // строка GET запроса
+            if(url != '') {
+                tmp = (url.substr(1)).split('&');   // разделяем переменные
+                for(var i=0; i < tmp.length; i++) {
+                    tmp2 = tmp[i].split('=');     // массив get будет содержать
+                    get[tmp2[0]] = tmp2[1];       // пары ключ(имя переменной)->значение
+                }
+            }
+//дальше заполняем все, что нам надо данными из массива get
+            document.getElementById('Username1').innerHTML = get['Username'];
+            document.getElementById('Username2').innerHTML = get['Username'];
+            document.getElementById('Username3').innerHTML = get['Username'];
+            document.getElementById('u1').value = get['Username'];
+            document.getElementById('u2').value = get['Username'];
+            document.getElementById("u3").value = get['Username'];
+        }
+
+    </script>
+</head>
+<body onload="loaddata()">
+<div class="container">
+    <div class="grid-item grid-item-1"></div>
+    <div class="grid-item grid-item-main">
+        <div class="el header">
+            <img src="img/bg112.jpg" alt="">
+            <form action="home.html" method="get" id="form1">
+                <img src="img/download%20(3).gif" alt="">
+                <input type="text" name="Username" id="u1" style="display: none">
+                <button class="header-img menu-text" type="submit" id="Username1" form="form1">
+                </button>
+            </form>
+            <img src="img/bg111.jpg" alt="">
+        </div>
+        <div class="el menu">
+            <form action="profile.html" method="get" id="form2">
+                <input type="text" name="Username" id="u2" style="display: none">
+                <button class="menu-text profile-button" type="submit" id="Username2" form="form2">
+                </button>
+            </form>
+            <form action="grades.html" method="get" id="form3">
+                <input type="text" name="Username" id="u3" style="display: none">
+                <button class="grades-button menu-text" type="submit" id="Username3" form="form3">
+                </button>
+            </form>
+            <a href="https://Ih8uSenpai.github.io">
+                <button class="exit-button">
+                </button>
+            </a>
+        </div>
+        <div class="content-container-1">
+            <div class="holder1">
+                <div class="grades-holder">
+                    <div class="grades-box" id="box1">
+                        <div class="grades-header">
+                            <h1 style="text-align:center; padding-top: 0.5rem; border-width: 0 0 2px 0; border-style: solid">курс - 4 семестр - 2</h1><br>
+                            <h1 style="margin-bottom: 1rem">Зачеты</h1>
+                        </div>
+                        <div class="subjects">
+                            <p class="subjects-item">Зачет 1</p>
+                            <p class="subjects-item">Зачет 2</p>
+                            <p class="subjects-item">Зачет 3</p>
+                            <p class="subjects-item">Зачет 4</p>
+                            <p class="subjects-item">Зачет 5</p>
+                            <p class="subjects-item">Зачет 6</p>
+                        </div>
+                        <div class="grades">
+                            <p class="subjects-item center">Зачет</p>
+                            <p class="subjects-item center">Зачет</p>
+                            <p class="subjects-item center">Зачет</p>
+                            <p class="subjects-item center">Зачет</p>
+                            <p class="subjects-item center">Зачет</p>
+                            <p class="subjects-item center">Зачет</p>
+                        </div>
+                    </div>
+
+
+                    <div class="grades-box" id="box2">
+                        <div class="grades-header">
+                            <h1 style="text-align:center; padding-top: 0.5rem; border-width: 0 0 2px 0; border-style: solid">курс - 4 семестр - 2</h1><br>
+                            <h1 style="margin-bottom: 1rem">Экзамены</h1>
+                        </div>
+                        <div class="subjects">
+                            <p class="subjects-item">Экзамен 1</p>
+                            <p class="subjects-item">Экзамен 2</p>
+                            <p class="subjects-item">Экзамен 3</p>
+                            <p class="subjects-item">Экзамен 4</p>
+                            <p class="subjects-item">Экзамен 5</p>
+                            <p class="subjects-item">Экзамен 6</p>
+                            <p class="subjects-item">Экзамен 7</p>
+                            <p class="subjects-item">Экзамен 8</p>
+                            <p class="subjects-item">Экзамен 9</p>
+                        </div>
+                        <div class="grades">
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="grades-box" id="box3">
+                        <div class="grades-header">
+                            <h1 style="text-align:center; padding-top: 0.5rem; border-width: 0 0 2px 0; border-style: solid">курс - 4 семестр - 2</h1><br>
+                            <h1 style="margin-bottom: 1rem">Другое</h1>
+                        </div>
+                        <div class="subjects">
+                            <p class="subjects-item">Практика 1</p>
+                            <p class="subjects-item">Практика 2</p>
+                            <p class="subjects-item">Проект 1</p>
+                        </div>
+                        <div class="grades">
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                            <p class="subjects-item center">5</p>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="next" id="next">→</button>
+                <footer>
+                    <h1>© Маров Егор Андреевич<br>ИКБО-24-21</h1>
+                    <div class="footer-el"><p>+7 960 556 90 95</p> <p>mipichikimicci33uwu@gmail.com</p></div>
+                    <div class="socials">
+                        <a href=""><img src="img/yt.png" width="50rem" class="btn yt1"></a>
+                        <a href=""><img src="img/twi.png" width="50rem" class="btn twi1"></a>
+                        <a href=""><img src="img/tg.png" width="50rem" class="btn tg1"></a>
+                        <a href=""><img src="img/inst.png" width="50rem" class="btn inst1"></a>
+                        <a href=""><img src="img/sp.png" width="50rem" class="btn sp1"></a>
+                    </div>
+                </footer>
+            </div>
+            <script>
+                var i = 1;
+                var box1 = document.getElementById("box1");
+                var box2 = document.getElementById("box2");
+                var box3 = document.getElementById("box3");
+                document.querySelector("#next").onclick = function(){
+                    if (i == 1) {
+                        document.getElementById("box2").style.transform = 'translate(200%, 0%)';
+                        document.getElementById("box2").style.transitionDuration = '1.5s';
+                        document.getElementById("box1").style.transform = 'translate(200%, 0%)';
+                        document.getElementById("box1").style.transitionDuration = '1.5s';
+                        document.getElementById("box3").style.transitionDuration = '0s';
+                        document.getElementById("box3").style.transform = 'translate(-400%, 0%)';
+                    }
+                    if (i == 2) {
+                        document.getElementById("box1").style.transform = 'translate(400%, 0%)';
+                        document.getElementById("box1").style.transitionDuration = '1.5s';
+                        document.getElementById("box3").style.transform = 'translate(-200%, 0%)';
+                        document.getElementById("box3").style.transitionDuration = '1.5s';
+                        document.getElementById("box2").style.transitionDuration = '0s';
+                        document.getElementById("box2").style.transform = 'translate(-200%, 0%)';
+                    }
+                    if (i == 3) {
+                        document.getElementById("box3").style.transform = 'translate(0%, 0%)';
+                        document.getElementById("box3").style.transitionDuration = '1.5s';
+                        document.getElementById("box2").style.transform = 'translate(0%, 0%)';
+                        document.getElementById("box2").style.transitionDuration = '1.5s';
+                        document.getElementById("box1").style.transitionDuration = '0s';
+                        document.getElementById("box1").style.transform = 'translate(0%, 0%)';
+                    }
+                    i = i % 3 + 1;
+                }
+            </script>
+
+        </div>
+
+    </div>
+    <div class="grid-item-2"></div>
+</div>
+
+</body>
+</html>

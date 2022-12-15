@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="homeStyle.css">
+    <script>
+        function loaddata(){
+            var tmp = new Array();    // два вспомогательных
+            var tmp2 = new Array();  // массива
+            get = new Array();
+            var url = location.search;    // строка GET запроса
+            if(url != '') {
+                tmp = (url.substr(1)).split('&');   // разделяем переменные
+                for(var i=0; i < tmp.length; i++) {
+                    tmp2 = tmp[i].split('=');     // массив get будет содержать
+                    get[tmp2[0]] = tmp2[1];       // пары ключ(имя переменной)->значение
+                }
+            }
+//дальше заполняем все, что нам надо данными из массива get
+            document.getElementById("Username").innerHTML = get['Username'];
+            document.getElementById("Username1").innerHTML = get['Username'];
+            document.getElementById("Username2").innerHTML = get['Username'];
+            document.getElementById("Username3").innerHTML = get['Username'];
+            document.getElementById("u1").value = get['Username'];
+            document.getElementById("u2").value = get['Username'];
+            document.getElementById("u3").value = get['Username'];
+            document.getElementById("u4").value = get['Username'];
+        }
+
+    </script>
+</head>
+<body onLoad='loaddata()'>
+
+<div class="container">
+    <div class="grid-item grid-item-1"></div>
+    <div class="grid-item grid-item-main">
+        <div class="el header">
+            <img src="img/bg112.jpg" alt="">
+            <form action="home.html" method="get" id="form1">
+                <img src="img/download%20(3).gif" alt="">
+                <input type="text" name="Username" id="u1" style="display: none">
+                <button  class="header-img menu-text" type="submit" id="Username1" form="form1">
+                </button>
+            </form>
+            <img src="img/bg111.jpg" alt="">
+        </div>
+        <div class="el menu">
+            <form action="profile.html" method="get" id="form2">
+                <input type="text" name="Username" id="u2" style="display: none">
+                <button class="menu-text profile-button" type="submit" id="Username2" form="form2">
+                </button>
+            </form>
+            <form action="grades.html" method="get" id="form3">
+                <input type="text" name="Username" id="u3" style="display: none">
+                <button class="menu-text grades-button" type="submit" id="Username3" form="form3">
+                </button>
+            </form>
+            <a href="https://Ih8uSenpai.github.io">
+                <button class="exit-button">
+            </button></a>
+        </div>
+        <div class="el text-container el1">
+            <div class="text-wrapper big-el text-el-1"><h1>Добро пожаловать,<br><span class="big-text" name="Username" id="Username"></span><span class="big-text">!<br>❤</span></h1>
+                <p>На этой страничке вы можете узнать больше об этом месте<br>и даже возможно получить ответы на свои вопросы🙂<br>
+                </p>
+                <img src="img/needy-streamer-overload-needy-girl-overdose.gif">
+            </div>
+            <div class="text-wrapper text-el-3"><h1>Что это за место?</h1>
+                <p>Приятно познакомиться! Я ваша электронная зачетка <3<br>Позаботьтесь обо мне 🥰<br>
+                </p>
+            </div>
+            <div class="text-wrapper text-el-3 reduce-font"><h1>Почему в моей зачетке ан*ме??😳</h1>
+                <p>Я... я вам не нравлюсь? <br>Мможет.... мне стоит просто исчезнуть?</p>
+                <a href="deadend.html"><button class="dialog-button red-button">Да. Не люблю такое :)</button></a>
+                <a href=""><button class="dialog-button blue-button">Ты моя единственная любимая зачеточка не уходи пожалуйста <3</button></a>
+            </div>
+            <div class="text-wrapper text-el-3"><h1>Предложения</h1>
+                <p>Пожалуйста, оставьте свое предложение по улучшению сайта:</p>
+                <form>
+                    <input type="text" name="Username" id="u4" style="display: none">
+                <textarea class="txtarea hide" name="message" id="about" maxlength="300" minlength="1"
+                          placeholder="type something (1-300 symbols)" required></textarea>
+                <input class="submit hide" type="submit" name="submit_btn" value="send">
+                </form>
+            </div>
+            <div class="text-wrapper text-el-3"><a href="" style="color: cyan"><h1>Поддержать зачетку</h1></a>
+                <p></p>
+            </div>
+            <footer>
+                <h1>© Маров Егор Андреевич<br>ИКБО-24-21</h1>
+                <div class="footer-el"><p>+7 960 556 90 95</p> <p>mipichikimicci33uwu@gmail.com</p></div>
+                <div class="socials">
+                    <a href=""><img src="img/yt.png" width="50rem" class="btn yt1"></a>
+                    <a href=""><img src="img/twi.png" width="50rem" class="btn twi1"></a>
+                    <a href=""><img src="img/tg.png" width="50rem" class="btn tg1"></a>
+                    <a href=""><img src="img/inst.png" width="50rem" class="btn inst1"></a>
+                    <a href=""><img src="img/sp.png" width="50rem" class="btn sp1"></a>
+                </div>
+            </footer>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
