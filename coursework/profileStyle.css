@@ -351,6 +351,7 @@ footer h1{
 .aboutme form{
     display: flex;
     width: 100%;
+    color: white;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -362,9 +363,10 @@ footer h1{
 textarea{
     width: 70%;
     min-height:15rem;
-    background: rgba(255,255,255,0.3);
+    background: rgba(210,234,242,0.78);
     border-radius: 5%;
     padding: 1rem;
+    color: white;
 }
 .submit{
     width: calc(5rem);
