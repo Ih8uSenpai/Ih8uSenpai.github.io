@@ -475,6 +475,7 @@ textarea{
     text-align: center;
     justify-items: center;
     align-items: center;
+    background: rgba(16,8,11,0.11);
 }
 
 .course-banner h1[class="hover-hide"]{
