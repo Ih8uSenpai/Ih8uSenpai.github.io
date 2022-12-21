@@ -186,7 +186,7 @@ body{
     position: relative;
     display: grid;
     height: fit-content;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     text-align: center;
