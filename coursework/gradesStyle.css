@@ -277,6 +277,7 @@ textarea{
     grid-template-columns: 1fr 1fr;
     height: fit-content;
     grid-row-gap: 4rem;
+    grid-column-gap: 1.5rem;
     width: 100%;
     font-family: Gabriola;
     font-size: 1.2rem;
