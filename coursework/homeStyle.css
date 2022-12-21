@@ -301,8 +301,8 @@ body{
 }
 .blue-button:hover{
     transition-duration: 3s;
-    background: cyan;
-    color: hotpink;
+    background: rgba(87,242,53,0.8);
+    color: white;
 }
 
 .reduce-font h1{
