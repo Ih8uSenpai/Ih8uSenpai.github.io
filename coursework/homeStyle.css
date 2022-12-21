@@ -320,7 +320,7 @@ footer{
     align-self: flex-end;
     height: fit-content;
     padding: 1rem;
-    border-radius: 0px 0px 1rem 1rem;
+    border-radius: 0px 0px 3rem 3rem;
     width: 100%;
     background: rgba(0,0,0,0.29);
 }
