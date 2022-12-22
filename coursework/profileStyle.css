@@ -264,6 +264,7 @@ body{
     position: absolute;
     background: rgba(187,159,206,0.38);
     overflow: hidden;
+    border-radius: 3rem 3rem 0 0;
 }
 .change-background input{
     display: none;
@@ -278,8 +279,8 @@ body{
     border-radius: 30%;
     opacity: 0.5;
     position: absolute;
-    top:0;
-    right: 0;
+    top:5%;
+    right: 2%;
 }
 .change-background:hover .change-background-button{
     z-index: 3;
