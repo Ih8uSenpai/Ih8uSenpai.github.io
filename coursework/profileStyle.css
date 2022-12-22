@@ -299,7 +299,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 25rem;
     border-radius: 2rem;
     border: 5px cyan double;
     padding: 0.2rem 1rem 1rem 1rem;
@@ -442,7 +442,10 @@ textarea{
         grid-template-rows: 1fr 1fr 1fr;
     }
     .banner p{
-        font-size: 1rem;
+        font-size: 1.7rem;
+    }
+    .banner h1{
+        font-size: 2.5rem;
     }
     .content-container{
         grid-template-rows: 1.6fr 0.3fr 0.6fr 0.6fr 0.6fr 1.6fr 1fr;
