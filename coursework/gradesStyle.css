@@ -290,7 +290,7 @@ textarea{
     text-align: center;
     justify-items: center;
     align-items: center;
-    background: rgba(16,8,11,0.11);
+    background: rgba(16,8,11,0.25);
 }
 
 .course-banner h1[class="hover-hide"]{
@@ -462,6 +462,7 @@ textarea{
     height: 100%;
 }
 .coursebutton{
+    transition: 1s;
     position: relative;
     display: none;
     align-items: center;
@@ -498,7 +499,9 @@ textarea{
     display: grid;
 }
 .coursebutton:hover{
-    background: rgba(0,0,0,0.3);
+    transition-duration: 1s;
+    background: rgba(0,0,0,0.6);
     color: white;
     cursor: pointer;
 }
+
